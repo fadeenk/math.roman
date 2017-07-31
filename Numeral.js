@@ -1,7 +1,7 @@
 Numeral = {
   roman : function(n){
-    var roman=['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M'];
-    var value=[1,     4,   5,    9,   10,  40,   50,  90,  100,  400,  500, 900, 1000];
+    var roman=['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M', 'V\u0305','I\u0305X\u0305', 'X\u0305', 'X\u0305L\u0305', 'L\u0305', 'X\u0305C\u0305', 'C\u0305', 'C\u0305D\u0305', 'D\u0305', 'C\u0305M\u0305', 'M\u0305'];
+    var value=[1,     4,   5,    9,   10,  40,   50,  90,  100,  400,  500, 900, 1000, 5000, 9000, 10000, 40000, 50000, 90000, 100000, 400000, 500000, 900000, 1000000];
     var res,i;
     if(!isNaN(parseInt(n,10))){ //if input is a number converts it to roman
       res ='';
