@@ -1,7 +1,20 @@
 Numeral = {
   roman : function(n){
-    var roman=['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M', 'V\u0305','I\u0305X\u0305', 'X\u0305', 'X\u0305L\u0305', 'L\u0305', 'X\u0305C\u0305', 'C\u0305', 'C\u0305D\u0305', 'D\u0305', 'C\u0305M\u0305', 'M\u0305'];
-    var value=[1,     4,   5,    9,   10,  40,   50,  90,  100,  400,  500, 900, 1000, 5000, 9000, 10000, 40000, 50000, 90000, 100000, 400000, 500000, 900000, 1000000];
+    // Supports up to 4,999,999,999
+    // see http://www.csgnetwork.com/csgromancnv.html and reference wolfram for validation
+    // http://www.wolframalpha.com/input/?i=4999999999+in+roman+numerals
+    var roman=[
+      'I', 'IV', 
+      'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M',
+      'V\u0305','I\u0305X\u0305', 'X\u0305', 'X\u0305L\u0305', 'L\u0305', 'X\u0305C\u0305', 'C\u0305', 'C\u0305D\u0305', 'D\u0305', 'C\u0305M\u0305', 'M\u0305',
+      'V\u033F','I\u033FX\u033F', 'X\u033F', 'X\u033FL\u033F', 'L\u033F', 'X\u033FC\u033F', 'C\u033F', 'C\u033FD\u033F', 'D\u033F', 'C\u033FM\u033F', 'M\u033F',
+    ];
+    var value=[
+      1,     4,   
+      5,         9,                10,        40,               50,        90,               100,       400,             500,        900,              1000,
+      5000,      9000,             10000,     40000,            50000,     90000,            100000,    400000,          500000,     900000,           1000000,
+      5000000,   9000000,          10000000,  40000000,         50000000,  90000000,         100000000, 400000000,       500000000,  900000000,        1000000000,
+    ];
     var res,i;
     if(!isNaN(parseInt(n,10))){ //if input is a number converts it to roman
       res ='';
